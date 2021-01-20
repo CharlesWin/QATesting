@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="false">
+    <test name="Test1">
+        <groups>
+            <run>
+                <include name="samsung"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.galaykovskiy.lesson1.TestIphone"/>
+            <class name="com.galaykovskiy.lesson1.TestSamsung"/>
+        </classes>
+    </test>
+</suite>
