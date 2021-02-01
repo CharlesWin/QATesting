@@ -4,6 +4,8 @@
         <classes>
             <class name="com.galaykovskiy.lesson1.TestIphone" />
             <class name="com.galaykovskiy.lesson1.TestSamsung" />
+            <class name="com.galaykovskiy.lesson1.TestWebSite" />
+            <class name="com.galaykovskiy.lesson1.TestCalculation" />
         </classes>
     </test>
 </suite>

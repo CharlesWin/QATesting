@@ -14,6 +14,7 @@ public class TestWebSite {
 
     @Test (priority = 1)
     public void testLogin(){
+        String str = "asd";
         log.info("Login was successfully!");
     }
 
