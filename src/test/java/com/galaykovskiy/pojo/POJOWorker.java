@@ -32,11 +32,11 @@ public class POJOWorker {
 
         Map<String, Object> pojoFile = new HashMap<>();
         pojoFile.put("title", "This is a test case");
-        pojoFile.put("typeId", 1);
-        pojoFile.put("priorityId", 3);
+        pojoFile.put("type_id", 1);
+        pojoFile.put("priority_id", 3);
         pojoFile.put("estimate", "3m");
         pojoFile.put("refs", refs);
-        pojoFile.put("customStepsSeparated", stepsSeparated);
+        pojoFile.put("custom_steps_separated", stepsSeparated);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         System.out.println(gson.toJson(POJOWorker.builderPOJO(pojoFile)));
@@ -47,8 +47,8 @@ public class POJOWorker {
 
         try {
             result.setTitle(pojoFile.get("title").toString());
-            result.setTypeId(Integer.parseInt(pojoFile.get("typeId").toString()));
-            result.setPriorityId(Integer.parseInt(pojoFile.get("priorityId").toString()));
+            result.setTypeId(Integer.parseInt(pojoFile.get("type_id").toString()));
+            result.setPriorityId(Integer.parseInt(pojoFile.get("priority_id").toString()));
             result.setEstimate(pojoFile.get("estimate").toString());
 
             Refs refs = new Refs();
@@ -58,7 +58,7 @@ public class POJOWorker {
             result.setRefs(refs);
 
             List<CustomStepsSeparated> stepsResultList = new ArrayList<>();
-            List<Map<String, String>> stepsList = castObjectToList(pojoFile.get("customStepsSeparated"));
+            List<Map<String, String>> stepsList = castObjectToList(pojoFile.get("custom_steps_separated"));
 
             for (Map<String, String> step : stepsList) {
                 CustomStepsSeparated stepsSeparated = new CustomStepsSeparated();
