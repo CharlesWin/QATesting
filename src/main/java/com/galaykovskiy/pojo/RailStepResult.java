@@ -1,14 +1,19 @@
 package com.galaykovskiy.pojo;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class RailStepResult {
     private String title;
+    @SerializedName("type_id")
     private int typeId;
+    @SerializedName("priority_id")
     private int priorityId;
     private String estimate;
 
     private Refs refs;
+    @SerializedName("custom_steps_separated")
     private List<CustomStepsSeparated> customStepsSeparated;
 
     public String getTitle() {
