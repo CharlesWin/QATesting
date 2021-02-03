@@ -22,21 +22,21 @@ public class TestPOJO {
     public Object[][] initData() {
         Map<String, Object> map1 = new HashMap<>();
         map1.put("title", "This is a test case");
-        map1.put("typeId", 1);
-        map1.put("priorityId", 3);
+        map1.put("type_id", 1);
+        map1.put("priority_id", 3);
         map1.put("estimate", "3m");
         map1.put("refs", setRefs("commit", "owner"));
-        map1.put("customStepsSeparated", setCustomSteps(
+        map1.put("custom_steps_separated", setCustomSteps(
                 new String[]{"Step 1", "Expected Result 1"},
                 new String[]{"Step 2", "Expected Result 2"}));
 
         Map<String, Object> map2 = new HashMap<>();
         map2.put("title", "Second test case");
-        map2.put("typeId", 2);
-        map2.put("priorityId", 25);
+        map2.put("type_id", 2);
+        map2.put("priority_id", 25);
         map2.put("estimate", "1d");
         map2.put("refs", setRefs("push", "devops", "jenkins"));
-        map2.put("customStepsSeparated", setCustomSteps(
+        map2.put("custom_steps_separated", setCustomSteps(
                 new String[]{"Step 1", "Current result"},
                 new String[]{"Step 2", "Expected Patronum"},
                 new String[]{"Step 3", "The end"}));
